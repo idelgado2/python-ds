@@ -88,3 +88,16 @@ $$O(n)$$
 ##### Explanation:
 
 We go through the list only once.
+
+##### To Note:
+
+Sets are used to store multiple items in a single variable.
+
+Sets are written with curly brackets, they do not have an order, and <b>duplicates are not allowed</b>. You can attempt to add a duplicate item - it will not throw an error, but the set will not change.
+
+Example:
+
+```python
+thisset = {"apple", "banana", "cherry", "apple"}
+print(thisset) # Output: {'cherry', 'banana', 'apple'}
+```
