@@ -92,6 +92,13 @@ Instead of sorting the strings to validate if they are anagrams (using sorted st
 
 It will be usefule to remeber that the alphabet is 26 characters long. We can easily create an array with 26 zeros with `strCode = [0] * 26`
 
+Useful to know the function `ord(char)`. This returns the Unicode code point of a character. By subtracting `ord('a')` from `ord(c)`, we map each lowercase letter to a unique index between 0 and 25. For example, `'a'` maps to index 0, `'b'` to index 1, and so on. This allows us to increment the correct position in the `strCode` array for each character in the string.
+
+Example:
+
+- For `c = 'b'`, `ord('b') - ord('a') = 1`, so we increment index 1 in the array.
+- For `c = 'a'`, `ord('a') - ord('a') = 0`, so we increment index 0 in the array.
+
 We can simplify the the code by using `defaultdict()` but this is not necessary. This simply reduced an edge case where a key is not found. It does not improve time complexity. But just something to be aware of since the solution in neetcode uses this function.
 
 ```python
